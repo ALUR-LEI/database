@@ -7,4 +7,7 @@ thumbs.db
 *.log
 data/*.sql
 *.zip
-
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
