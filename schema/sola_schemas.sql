@@ -4873,7 +4873,7 @@ COMMENT ON SEQUENCE ba_unit_last_name_part_seq IS 'Sequence number used as the b
 
 CREATE TABLE ba_unit_rel_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(500),
     status character(1) NOT NULL
 );
@@ -5015,7 +5015,7 @@ ALTER TABLE ba_unit_target_historic OWNER TO postgres;
 
 CREATE TABLE ba_unit_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 't'::bpchar NOT NULL
 );
@@ -5193,7 +5193,7 @@ ALTER TABLE condition_for_rrr_historic OWNER TO postgres;
 
 CREATE TABLE condition_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(10000) NOT NULL,
     status character(1) NOT NULL
 );
@@ -5335,7 +5335,7 @@ ALTER TABLE mortgage_isbased_in_rrr_historic OWNER TO postgres;
 
 CREATE TABLE mortgage_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) NOT NULL
 );
@@ -6019,7 +6019,7 @@ COMMENT ON COLUMN rrr.redact_code IS 'FROM  SOLA State Land Extension: The redac
 
 CREATE TABLE rrr_group_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) NOT NULL
 );
@@ -6235,7 +6235,7 @@ ALTER TABLE rrr_share_historic OWNER TO postgres;
 CREATE TABLE rrr_type (
     code character varying(20) NOT NULL,
     rrr_group_type_code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     is_primary boolean DEFAULT false NOT NULL,
     share_check boolean NOT NULL,
     party_required boolean NOT NULL,
@@ -7028,7 +7028,7 @@ COMMENT ON COLUMN cadastre_object.redact_code IS 'FROM  SOLA State Land Extensio
 
 CREATE TABLE land_use_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 't'::bpchar NOT NULL
 );
@@ -7674,7 +7674,7 @@ SET search_path = application, pg_catalog;
 
 CREATE TABLE application_action_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status_to_set character varying(20),
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
@@ -8043,7 +8043,7 @@ ALTER TABLE application_spatial_unit_historic OWNER TO postgres;
 
 CREATE TABLE application_status_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -8378,7 +8378,7 @@ ALTER TABLE cancel_notification OWNER TO postgres;
 
 CREATE TABLE request_category_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 't'::bpchar NOT NULL
 );
@@ -8429,7 +8429,7 @@ COMMENT ON COLUMN request_category_type.status IS 'Status of the request categor
 CREATE TABLE request_type (
     code character varying(20) NOT NULL,
     request_category_code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     nr_days_to_complete integer DEFAULT 0 NOT NULL,
@@ -8600,7 +8600,7 @@ COMMENT ON COLUMN request_type_requires_source_type.request_type_code IS 'The re
 
 CREATE TABLE service_action_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status_to_set character varying(20),
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
@@ -8686,7 +8686,7 @@ ALTER TABLE service_historic OWNER TO postgres;
 
 CREATE TABLE service_status_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -8765,7 +8765,7 @@ COMMENT ON VIEW systematic_registration_certificates IS 'Used by systematic regi
 
 CREATE TABLE type_action (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 't'::bpchar NOT NULL
 );
@@ -8917,7 +8917,7 @@ SET search_path = cadastre, pg_catalog;
 
 CREATE TABLE area_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 'c'::bpchar NOT NULL
 );
@@ -8967,7 +8967,7 @@ COMMENT ON COLUMN area_type.status IS 'SOLA Extension: Status of the area type';
 
 CREATE TABLE building_unit_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 't'::bpchar NOT NULL
 );
@@ -9269,7 +9269,7 @@ ALTER TABLE cadastre_object_target_historic OWNER TO postgres;
 
 CREATE TABLE cadastre_object_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) NOT NULL,
     in_topology boolean DEFAULT false NOT NULL
@@ -9327,7 +9327,7 @@ COMMENT ON COLUMN cadastre_object_type.in_topology IS 'Flag to indicate that all
 
 CREATE TABLE dimension_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 't'::bpchar NOT NULL
 );
@@ -9529,7 +9529,7 @@ COMMENT ON VIEW hierarchy IS 'First (highest) level of the hierarchical spatial 
 
 CREATE TABLE hierarchy_level (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 't'::bpchar NOT NULL
 );
@@ -9834,7 +9834,7 @@ COMMENT ON TABLE level_config_map_layer IS 'It provides for each level which lay
 
 CREATE TABLE level_content_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 't'::bpchar NOT NULL
 );
@@ -10073,7 +10073,7 @@ COMMENT ON VIEW place_name IS 'View for retrieving place name features for displ
 
 CREATE TABLE register_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) NOT NULL
 );
@@ -10413,7 +10413,7 @@ ALTER TABLE spatial_value_area_historic OWNER TO postgres;
 
 CREATE TABLE structure_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 't'::bpchar NOT NULL
 );
@@ -10463,7 +10463,7 @@ COMMENT ON COLUMN structure_type.status IS 'SOLA Extension: Status of the struct
 
 CREATE TABLE surface_relation_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 't'::bpchar NOT NULL
 );
@@ -10679,7 +10679,7 @@ ALTER TABLE survey_point_historic OWNER TO postgres;
 
 CREATE TABLE utility_network_status_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) DEFAULT 't'::bpchar NOT NULL
 );
@@ -10730,7 +10730,7 @@ COMMENT ON COLUMN utility_network_status_type.status IS 'SOLA Extension: Status 
 
 CREATE TABLE utility_network_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) NOT NULL
 );
@@ -11178,7 +11178,7 @@ COMMENT ON TABLE administrative_boundary_historic IS 'Historic for administrativ
 
 CREATE TABLE administrative_boundary_status (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -11227,7 +11227,7 @@ COMMENT ON COLUMN administrative_boundary_status.description IS 'Description of 
 
 CREATE TABLE administrative_boundary_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     level smallint DEFAULT 1 NOT NULL,
     description character varying(1500)
@@ -12286,7 +12286,7 @@ ALTER TABLE claim_share_historic OWNER TO postgres;
 
 CREATE TABLE claim_status (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -12670,7 +12670,7 @@ ALTER TABLE field_constraint_option_historic OWNER TO postgres;
 
 CREATE TABLE field_constraint_type (
     code character varying(255) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 'c'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -13011,7 +13011,7 @@ ALTER TABLE field_template_historic OWNER TO postgres;
 
 CREATE TABLE field_type (
     code character varying(255) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 'c'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -13060,7 +13060,7 @@ COMMENT ON COLUMN field_type.description IS 'Description of the field type.';
 
 CREATE TABLE field_value_type (
     code character varying(255) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 'c'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -13703,7 +13703,7 @@ COMMENT ON TABLE party_historic IS 'Historic table for opentenure.party. Keeps a
 
 CREATE TABLE rejection_reason (
     code character varying(20) NOT NULL,
-    display_value character varying(2000) NOT NULL,
+    display_value character varying(3000) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -14309,7 +14309,7 @@ ALTER TABLE section_template_historic OWNER TO postgres;
 
 CREATE TABLE termination_reason (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -14360,7 +14360,7 @@ SET search_path = party, pg_catalog;
 
 CREATE TABLE communication_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -14410,7 +14410,7 @@ COMMENT ON COLUMN communication_type.description IS 'Description of the communic
 
 CREATE TABLE gender_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -14478,7 +14478,7 @@ ALTER TABLE group_party_historic OWNER TO postgres;
 
 CREATE TABLE group_party_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -14528,7 +14528,7 @@ COMMENT ON COLUMN group_party_type.description IS 'LADM Definition: Description 
 
 CREATE TABLE id_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -14725,7 +14725,7 @@ ALTER TABLE party_role_historic OWNER TO postgres;
 
 CREATE TABLE party_role_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -14775,7 +14775,7 @@ COMMENT ON COLUMN party_role_type.description IS 'Description of the party role 
 
 CREATE TABLE party_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -14874,7 +14874,7 @@ SET search_path = source, pg_catalog;
 
 CREATE TABLE administrative_source_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) NOT NULL,
     description character varying(1500),
     is_for_registration boolean DEFAULT false
@@ -15025,7 +15025,7 @@ ALTER TABLE archive_historic OWNER TO postgres;
 
 CREATE TABLE availability_status_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 'c'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -15176,7 +15176,7 @@ ALTER TABLE power_of_attorney_historic OWNER TO postgres;
 
 CREATE TABLE presentation_form_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -15697,7 +15697,7 @@ ALTER TABLE spatial_source_measurement_historic OWNER TO postgres;
 
 CREATE TABLE spatial_source_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     description character varying(1500)
 );
@@ -16185,7 +16185,7 @@ COMMENT ON COLUMN appgroup.description IS 'Describes the purpose of the appgroup
 
 CREATE TABLE approle (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) NOT NULL,
     description character varying(5000)
 );
@@ -16323,7 +16323,7 @@ CREATE TABLE br (
     id character varying(100) NOT NULL,
     display_name character varying(250) DEFAULT public.uuid_generate_v1() NOT NULL,
     technical_type_code character varying(20) NOT NULL,
-    feedback character varying(2000),
+    feedback character varying(3000),
     description character varying(1000),
     technical_description character varying(1500)
 );
@@ -16599,7 +16599,7 @@ COMMENT ON VIEW br_report IS 'Used in the generation of the Admin Business Rules
 
 CREATE TABLE br_severity_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) NOT NULL,
     description character varying(1000)
 );
@@ -16649,7 +16649,7 @@ COMMENT ON COLUMN br_severity_type.description IS 'A description of the severity
 
 CREATE TABLE br_technical_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) NOT NULL,
     description character varying(1000)
 );
@@ -16699,7 +16699,7 @@ COMMENT ON COLUMN br_technical_type.description IS 'A description of the technic
 
 CREATE TABLE br_validation_target_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     status character(1) NOT NULL,
     description character varying(5000)
 );
@@ -16965,7 +16965,7 @@ CREATE TABLE config_map_layer_type (
     code character varying(20) NOT NULL,
     display_value character varying(250) NOT NULL,
     status character(1) NOT NULL,
-    description character varying(555)
+    description character varying(750)
 );
 
 
@@ -17013,7 +17013,7 @@ COMMENT ON COLUMN config_map_layer_type.description IS 'A description of the map
 
 CREATE TABLE config_panel_launcher (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1000),
     status character(1) DEFAULT 't'::bpchar NOT NULL,
     launch_group character varying(20) NOT NULL,
@@ -17513,7 +17513,7 @@ COMMENT ON COLUMN map_search_option.description IS 'A description for the search
 
 CREATE TABLE panel_launcher_group (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1000),
     status character(1) DEFAULT 't'::bpchar NOT NULL
 );
@@ -17711,7 +17711,7 @@ SET search_path = transaction, pg_catalog;
 
 CREATE TABLE reg_status_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) NOT NULL
 );
@@ -17875,7 +17875,7 @@ ALTER TABLE transaction_source_historic OWNER TO postgres;
 
 CREATE TABLE transaction_status_type (
     code character varying(20) NOT NULL,
-    display_value character varying(500) NOT NULL,
+    display_value character varying(750) NOT NULL,
     description character varying(1500),
     status character(1) NOT NULL
 );

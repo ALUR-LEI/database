@@ -481,9 +481,18 @@ ALTER TABLE administrative_boundary_status ENABLE TRIGGER ALL;
 
 ALTER TABLE administrative_boundary_type DISABLE TRIGGER ALL;
 
-INSERT INTO administrative_boundary_type (code, display_value, status, level, description) VALUES ('significant', 'Significant Area::::::::::::::::::::::::::::::::::::', 'c', 1, '');
-INSERT INTO administrative_boundary_type (code, display_value, status, level, description) VALUES ('interest', 'Area of Interest::::::::::::::::::::::::::::::::::::', 'c', 2, '');
-
+INSERT INTO opentenure.administrative_boundary_type (code, display_value, status, level, description) VALUES ('country', 'National::::::::::::::::::::::::::::::::::::::::National::::::::National', 'c', 11, 'National Boundary::::::::::::::::::::::::::::::::::::::::::::::::');
+INSERT INTO opentenure.administrative_boundary_type (code, display_value, status, level, description) VALUES ('division', 'Division::::::::::::::::::::::::::::::::::::::::Division::::::::Division', 'c', 12, 'Divisional Boundary::::::::::::::::::::::::::::::::::::::::::::::::');
+INSERT INTO opentenure.administrative_boundary_type (code, display_value, status, level, description) VALUES ('district', 'District::::::::::::::::::::::::::::::::::::::::District::::::::District', 'c', 13, 'District::::::::::::::::::::::::::::::::::::::::::::::::');
+INSERT INTO opentenure.administrative_boundary_type (code, display_value, status, level, description) VALUES ('village', 'Village::::::::::::::::::::::::::::::::::::::::Village::::::::Village', 'c', 14, 'Village::::::::::::::::::::::::::::::::::::::::::::::::');
+INSERT INTO opentenure.administrative_boundary_type (code, display_value, status, level, description) VALUES ('priority_area', 'Priority Area::::::::::::::::::::::::::::::::::::::::Priority Area::::::::Priority Area', 'c', 15, 'Priority Area::::::::::::::::::::::::::::::::::::::::::::::::');
+INSERT INTO opentenure.administrative_boundary_type (code, display_value, status, level, description) VALUES ('tax_lot', 'Tax Allotment::::::::::::::::::::::::::::::::::::::::Tax Allotment::::::::Tax Allotment', 'c', 16, 'Tax Allotment::::::::::::::::::::::::::::::::::::::::::::::::');
+INSERT INTO opentenure.administrative_boundary_type (code, display_value, status, level, description) VALUES ('primary', 'Primary Community Boundary::::::::::::::::::::::::::::::::::::::::::::Primary Community Boundary::::Primary Community Boundary', 'c', 1, 'Primary Community Boundary::::::::::::::::::::::::::::::::::::::::::::::::Primary Community Boundary');
+INSERT INTO opentenure.administrative_boundary_type (code, display_value, status, level, description) VALUES ('secondary', 'Secondary Community Boundary::::::::::::::::::::::::::::::::::::::::::::::::Secondary Community Boundary', 'c', 2, 'Secondary Community Boundary::::::::::::::::::::::::::::::::::::::::::::::::');
+INSERT INTO opentenure.administrative_boundary_type (code, display_value, status, level, description) VALUES ('tertiary', 'Tertiary Community Boundary::::::::::::::::::::::::::::::::::::::::::::::::Tertiary Community Boundary', 'c', 3, 'Tertiary Community Boundary::::::::::::::::::::::::::::::::::::::::::::::::Tertiary Community Boundary');
+INSERT INTO opentenure.administrative_boundary_type (code, display_value, status, level, description) VALUES ('4-ary', '4th level Community Boundary::::::::::::::::::::::::::::::::::::::::::::::::4th level Community Boundary', 'c', 4, '4th level Community Boundary::::::::::::::::::::::::::::::::::::::::::::::::4th level Community Boundary');
+INSERT INTO opentenure.administrative_boundary_type (code, display_value, status, level, description) VALUES ('5-ary', '5th level Community Boundary::::::::::::::::::::::::::::::::::::::::::::::::5th level Community Boundary', 'c', 5, '5th level Community Boundary::::::::::::::::::::::::::::::::::::::::::::::::5th level Community Boundary');
+INSERT INTO opentenure.administrative_boundary_type (code, display_value, status, level, description) VALUES ('town_lot', 'Town Allotment::::::::::::::::::::::::::::::::::::::::Town Allotment::::::::Town Allotment', 'c', 17, 'Town Allotment::::::::::::::::::::::::::::::::::::::::::::::::');
 
 ALTER TABLE administrative_boundary_type ENABLE TRIGGER ALL;
 
